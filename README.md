@@ -1,37 +1,71 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Google Drive Download Link Generator</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div id="page_content">
+  <h1>Google Drive Download Link Generator</h1>
+  <h2>By <a href="http://www.kompiajaib.com/" title="Kompi Ajaib">KompiAjaib</a></h2>
+  <div class="container">
+    <div class="row">
+      <form>
+        <div class="form-group">
+        <h3>
+        <label for="driveID" class="example"><b>Google Drive ID example:</b>
+        </h3>
+        Google drive share link: <span class="ex-text">https://drive.google.com/file/d/</span><b>0Bz4YdwRI3rnCMFRoTmtSS0M1VHM</b><span class="ex-text">/view?usp=sharing</span></label>
+          <input type="text" class="form-control" id="driveID" placeholder="Put Google Drive ID Here" />
+        </div>
+      </form>
+      <div class="get">
+        <button class="btn btn-primary" id="get-button" type="submit" onclick='getLink()'>Get Link Download</button>
+      </div>
 
-You can use the [editor on GitHub](https://github.com/maxliteapp/googlelinkgenerator/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+      <div id="container">
+        <h3><b>Result:</b></h3>
+        <div id="link_container" data-toggle="tooltip" data-placement="top" title="Click then CTRL + C"></div>
+        <button type="button" class="btn btn-danger get-another" onClick="window.location.href=window.location.href">Get Another Link</button>
+      </div>
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <hr>
+        <div class="how-to">
+          <b>How to get Google drive share link:</b>
+          <br/>
+          <br/>
+          <p>Step 1: Go to <a href="https://drive.google.com/" target="_blank">Google Drive</a> and right click the file that you want to share. Then click on "Share...".</p>
+          <div style="clear: both; text-align: center;">
+            <img alt="thumb 1" src="img/Screenshot_1.jpg" width="600" height="575" />
+          </div>
+          <br/>
+          <br/>
+          <p>Step 2: On the window that comes up, click "Get shareable link".</p>
+          <div style="clear: both; text-align: center;">
+            <img alt="thumb 2" src="img/Screenshot_2.jpg" width="600" height="345" />
+          </div>
+          <br/>
+          <br/>
+          <p>Step 3: Make sure the dropdown is set to one of the "Anyone with the link..." or "Anyone on the internet..." options, then click "Copy link".</p>
+          <div style="clear: both; text-align: center;">
+            <img alt="thumb 3" src="img/Screenshot_3.jpg" width="600" height="485" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+  <div class="footer">
+    Copyright &#169; <script>document.write((new Date()).getFullYear());</script> Google Drive Link Download Generator
+  </div>
+</div>
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/maxliteapp/googlelinkgenerator/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/download_link.js"></script>
+</body>
+</html>
